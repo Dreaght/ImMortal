@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.arkivanov.decompose.extensions.compose.subscribeAsState
 import org.jetbrains.compose.resources.painterResource
 import immortal.app.shared.generated.resources.Res
@@ -45,4 +46,10 @@ internal fun GreetingContent(
             }
         }
     }
+}
+
+@Preview
+@Composable
+internal fun GreetingContentPreview() {
+    GreetingContent(component = PreviewGreetingComponent())
 }

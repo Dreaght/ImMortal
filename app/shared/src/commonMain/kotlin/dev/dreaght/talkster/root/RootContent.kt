@@ -3,6 +3,7 @@ package dev.dreaght.talkster.root
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.arkivanov.decompose.extensions.compose.stack.Children
 import com.arkivanov.decompose.extensions.compose.stack.animation.fade
 import com.arkivanov.decompose.extensions.compose.stack.animation.stackAnimation
@@ -29,4 +30,10 @@ private fun Children(component: RootComponent, modifier: Modifier = Modifier) {
             is RootComponent.Child.GreetingScreen -> GreetingContent(component = child.component)
         }
     }
+}
+
+@Preview
+@Composable
+internal fun RootContentPreview() {
+    RootContent(PreviewRootComponent())
 }
