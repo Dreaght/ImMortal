@@ -1,4 +1,4 @@
-rootProject.name = "talkster"
+rootProject.name = "ImMortal"
 
 pluginManagement {
     repositories {
