@@ -16,8 +16,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.arkivanov.decompose.extensions.compose.subscribeAsState
 import org.jetbrains.compose.resources.painterResource
-import talkster.app.shared.generated.resources.Res
-import talkster.app.shared.generated.resources.compose_multiplatform
+import immortal.app.shared.generated.resources.Res
+import immortal.app.shared.generated.resources.compose_multiplatform
 
 @Composable
 internal fun GreetingContent(
