@@ -94,6 +94,12 @@ kotlin {
         wasmJsMain.dependencies {
             api(libs.wrappers.browser)
         }
+
+        jvmTest.dependencies {
+            implementation(libs.compose.ui.uiTestJunit4)
+            implementation(libs.kotlinx.coroutinesSwing)
+            implementation(compose.desktop.currentOs)
+        }
     }
 }
 

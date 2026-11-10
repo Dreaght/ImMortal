@@ -14,10 +14,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.tooling.preview.Preview
 import com.arkivanov.decompose.extensions.compose.subscribeAsState
 import org.jetbrains.compose.resources.painterResource
-import talkster.app.shared.generated.resources.Res
-import talkster.app.shared.generated.resources.compose_multiplatform
+import immortal.app.shared.generated.resources.Res
+import immortal.app.shared.generated.resources.compose_multiplatform
 
 @Composable
 internal fun GreetingContent(
@@ -32,7 +34,10 @@ internal fun GreetingContent(
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Button(onClick = { component.onToggleClicked() }) {
+        Button(
+            onClick = { component.onToggleClicked() },
+            modifier = Modifier.testTag("toggleButton")
+        ) {
             Text("Click me!")
         }
         AnimatedVisibility(visible = model.showContent) {
@@ -41,8 +46,17 @@ internal fun GreetingContent(
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Image(painterResource(Res.drawable.compose_multiplatform), null)
-                Text("Compose: ${model.greetingText}")
+                Text(
+                    text = "Compose: ${model.greetingText}",
+                    modifier = Modifier.testTag("text")
+                )
             }
         }
     }
+}
+
+@Preview
+@Composable
+internal fun GreetingContentPreview() {
+    GreetingContent(component = PreviewGreetingComponent())
 }
