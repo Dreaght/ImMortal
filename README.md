@@ -47,8 +47,8 @@ architecture is designed via privilege separation (compartmentalization).
 - Combined with Decompose framework, it is the architecture of modular and extensible
   system, which from the evolutionary biology perspective are the qualities of
   a survivable organism, therefore the project is called **ImMortal**.
-- **Security.** Does not enforce compromise on security. I can implement proper privilege separation
-  architecture using native OS's sandbox, IPC, viewport mechanisms.
+- **Security.** Unlike cross-platform solutions, it does not enforce compromise on security.
+  I can implement proper privilege separation architecture using native OS's sandbox, IPC, viewport mechanisms.
 
 ## Status
 
