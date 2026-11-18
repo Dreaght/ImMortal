@@ -30,6 +30,12 @@ Use a transport protocol of choice (decoupled):
 There's zero assumption that standard internet connection is perfect and traffic is never shaped.
 A transport protocol does not know about the application and your data. The application does not know about the transport.
 
+[3] SECURITY:
+
+Unlike almost the entire industry, this project takes an orthogonally different approach on security.
+Instead of creating an illusion of security by hardening an authorized single-process monolith,
+architecture is designed via privilege separation (compartmentalization).
+
 ## Why Kotlin Multiplatform
 
 - **A runtime and toolkit independence.** The core application stays stable,
@@ -41,6 +47,8 @@ A transport protocol does not know about the application and your data. The appl
 - Combined with Decompose framework, it is the architecture of modular and extensible
   system, which from the evolutionary biology perspective are the qualities of
   a survivable organism, therefore the project is called **ImMortal**.
+- **Security.** Does not enforce compromise on security. I can implement proper privilege separation
+  architecture using native OS's sandbox, IPC, viewport mechanisms.
 
 ## Status
 
